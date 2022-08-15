@@ -1,0 +1,583 @@
+{
+	"info": {
+		"_postman_id": "85b757f3-7c08-40da-a4cc-b78f4892a5e6",
+		"name": "Test Inosoft",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "10333524"
+	},
+	"item": [
+		{
+			"name": "Auth Login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "email",
+							"value": "test@mail.com",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "123123123",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "localhost:8030/api/v1/login",
+					"host": [
+						"localhost"
+					],
+					"port": "8030",
+					"path": [
+						"api",
+						"v1",
+						"login"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Auth Login",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "email",
+									"value": "test@mail.com",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "123123123",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "localhost:8030/api/v1/login",
+							"host": [
+								"localhost"
+							],
+							"port": "8030",
+							"path": [
+								"api",
+								"v1",
+								"login"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Host",
+							"value": "localhost:8030"
+						},
+						{
+							"key": "Date",
+							"value": "Mon, 15 Aug 2022 18:14:25 GMT"
+						},
+						{
+							"key": "Date",
+							"value": "Mon, 15 Aug 2022 18:14:25 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "close"
+						},
+						{
+							"key": "X-Powered-By",
+							"value": "PHP/8.1.6"
+						},
+						{
+							"key": "Cache-Control",
+							"value": "no-cache, private"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "X-RateLimit-Limit",
+							"value": "60"
+						},
+						{
+							"key": "X-RateLimit-Remaining",
+							"value": "59"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"status\": \"Authorized\",\n    \"token\": \"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC9sb2NhbGhvc3Q6ODAzMFwvYXBpXC92MVwvbG9naW4iLCJpYXQiOjE2NjA1ODcyNjUsImV4cCI6MTY2MDU5MDg2NSwibmJmIjoxNjYwNTg3MjY1LCJqdGkiOiJRSTZmeHdrdzdueGhHNFNCIiwic3ViIjoiNjJmN2FkMTc0NjQyMDc5ZWIwMGFlNjMyIiwicHJ2IjoiMjNiZDVjODk0OWY2MDBhZGIzOWU3MDFjNDAwODcyZGI3YTU5NzZmNyJ9.zOmIAr_YnexblH3g2xN29bhZSaknasjZ2q-7QQDRGec\"\n}"
+				}
+			]
+		},
+		{
+			"name": "List Vehicles",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC9sb2NhbGhvc3Q6ODAzMFwvYXBpXC92MVwvbG9naW4iLCJpYXQiOjE2NjA1ODcyNjUsImV4cCI6MTY2MDU5MDg2NSwibmJmIjoxNjYwNTg3MjY1LCJqdGkiOiJRSTZmeHdrdzdueGhHNFNCIiwic3ViIjoiNjJmN2FkMTc0NjQyMDc5ZWIwMGFlNjMyIiwicHJ2IjoiMjNiZDVjODk0OWY2MDBhZGIzOWU3MDFjNDAwODcyZGI3YTU5NzZmNyJ9.zOmIAr_YnexblH3g2xN29bhZSaknasjZ2q-7QQDRGec",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8030/api/v1/vehicle?type=1",
+					"host": [
+						"localhost"
+					],
+					"port": "8030",
+					"path": [
+						"api",
+						"v1",
+						"vehicle"
+					],
+					"query": [
+						{
+							"key": "type",
+							"value": "1",
+							"description": "0 cars, 1 motorcycle"
+						}
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "List Vehicles",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8030/api/v1/vehicle?type=1",
+							"host": [
+								"localhost"
+							],
+							"port": "8030",
+							"path": [
+								"api",
+								"v1",
+								"vehicle"
+							],
+							"query": [
+								{
+									"key": "type",
+									"value": "1",
+									"description": "0 cars, 1 motorcycle"
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Host",
+							"value": "localhost:8030"
+						},
+						{
+							"key": "Date",
+							"value": "Mon, 15 Aug 2022 18:41:45 GMT"
+						},
+						{
+							"key": "Date",
+							"value": "Mon, 15 Aug 2022 18:41:45 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "close"
+						},
+						{
+							"key": "X-Powered-By",
+							"value": "PHP/8.1.6"
+						},
+						{
+							"key": "Cache-Control",
+							"value": "no-cache, private"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "X-RateLimit-Limit",
+							"value": "60"
+						},
+						{
+							"key": "X-RateLimit-Remaining",
+							"value": "59"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						}
+					],
+					"cookie": [],
+					"body": "[\n    {\n        \"id\": \"62fa93661c579c12590dc7b5\",\n        \"color\": \"red\",\n        \"price\": 16000000,\n        \"years\": \"2021\",\n        \"vehicles\": {\n            \"_id\": \"72f8b1edd2c0c50988095690\",\n            \"machine\": \"TSTM-23456\",\n            \"suspension_type\": \"Telescopic Fork\",\n            \"transmision_type\": \"Automatic\",\n            \"qty\": 20\n        }\n    },\n    {\n        \"id\": \"62fa93661c579c12590dc7b6\",\n        \"color\": \"blue\",\n        \"price\": 25000000,\n        \"years\": \"2018\",\n        \"vehicles\": {\n            \"_id\": \"79f8b1edd2c0c50988095690\",\n            \"machine\": \"TSTM-9688\",\n            \"suspension_type\": \"Telescopic Fork\",\n            \"transmision_type\": \"Automatic\",\n            \"qty\": 29\n        }\n    },\n    {\n        \"id\": \"62fa93661c579c12590dc7b7\",\n        \"color\": \"black\",\n        \"price\": 35000000,\n        \"years\": \"2020\",\n        \"vehicles\": {\n            \"_id\": \"79f8b1edd2c0c59288095690\",\n            \"machine\": \"TSTM-1056\",\n            \"suspension_type\": \"Telescopic Fork\",\n            \"transmision_type\": \"Automatic\",\n            \"qty\": 60\n        }\n    }\n]"
+				}
+			]
+		},
+		{
+			"name": "List Sales",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC9sb2NhbGhvc3Q6ODAzMFwvYXBpXC92MVwvbG9naW4iLCJpYXQiOjE2NjA1ODcyNjUsImV4cCI6MTY2MDU5MDg2NSwibmJmIjoxNjYwNTg3MjY1LCJqdGkiOiJRSTZmeHdrdzdueGhHNFNCIiwic3ViIjoiNjJmN2FkMTc0NjQyMDc5ZWIwMGFlNjMyIiwicHJ2IjoiMjNiZDVjODk0OWY2MDBhZGIzOWU3MDFjNDAwODcyZGI3YTU5NzZmNyJ9.zOmIAr_YnexblH3g2xN29bhZSaknasjZ2q-7QQDRGec",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8030/api/v1/sales",
+					"host": [
+						"localhost"
+					],
+					"port": "8030",
+					"path": [
+						"api",
+						"v1",
+						"sales"
+					],
+					"query": [
+						{
+							"key": "vehicle_id",
+							"value": "62f8c1e13efa05a972014cc2",
+							"disabled": true
+						},
+						{
+							"key": "date_start",
+							"value": "2022-07-14",
+							"disabled": true
+						},
+						{
+							"key": "date_end",
+							"value": "2022-07-20",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "List Sales",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8030/api/v1/sales",
+							"host": [
+								"localhost"
+							],
+							"port": "8030",
+							"path": [
+								"api",
+								"v1",
+								"sales"
+							],
+							"query": [
+								{
+									"key": "vehicle_id",
+									"value": "62f8c1e13efa05a972014cc2",
+									"disabled": true
+								},
+								{
+									"key": "date_start",
+									"value": "2022-07-14",
+									"disabled": true
+								},
+								{
+									"key": "date_end",
+									"value": "2022-07-20",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Host",
+							"value": "localhost:8030"
+						},
+						{
+							"key": "Date",
+							"value": "Mon, 15 Aug 2022 18:38:35 GMT"
+						},
+						{
+							"key": "Date",
+							"value": "Mon, 15 Aug 2022 18:38:35 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "close"
+						},
+						{
+							"key": "X-Powered-By",
+							"value": "PHP/8.1.6"
+						},
+						{
+							"key": "Cache-Control",
+							"value": "no-cache, private"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "X-RateLimit-Limit",
+							"value": "60"
+						},
+						{
+							"key": "X-RateLimit-Remaining",
+							"value": "59"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"success\": true,\n    \"data\": [\n        {\n            \"id\": \"62fa8d14945fcfa3f806abf6\",\n            \"total_price\": 160000000,\n            \"current_stock\": 8,\n            \"vehicle\": {\n                \"years\": \"2015\",\n                \"price\": 80000000,\n                \"color\": \"black\",\n                \"vehicle_data\": {\n                    \"machine\": \"TEST-231\",\n                    \"passenger_capacity\": 4,\n                    \"type\": \"TOYOTA VIOS\"\n                }\n            }\n        }\n    ]\n}"
+				}
+			]
+		},
+		{
+			"name": "Report Sales by Vehicle",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC9sb2NhbGhvc3Q6ODAzMFwvYXBpXC92MVwvbG9naW4iLCJpYXQiOjE2NjA1ODcyNjUsImV4cCI6MTY2MDU5MDg2NSwibmJmIjoxNjYwNTg3MjY1LCJqdGkiOiJRSTZmeHdrdzdueGhHNFNCIiwic3ViIjoiNjJmN2FkMTc0NjQyMDc5ZWIwMGFlNjMyIiwicHJ2IjoiMjNiZDVjODk0OWY2MDBhZGIzOWU3MDFjNDAwODcyZGI3YTU5NzZmNyJ9.zOmIAr_YnexblH3g2xN29bhZSaknasjZ2q-7QQDRGec",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8030/api/v1/sales/{{vehicles_id}}",
+					"host": [
+						"localhost"
+					],
+					"port": "8030",
+					"path": [
+						"api",
+						"v1",
+						"sales",
+						"{{vehicles_id}}"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Report Sales by Vehicle",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8030/api/v1/sales/62fa93661c579c12590dc7b2",
+							"host": [
+								"localhost"
+							],
+							"port": "8030",
+							"path": [
+								"api",
+								"v1",
+								"sales",
+								"62fa93661c579c12590dc7b2"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Host",
+							"value": "localhost:8030"
+						},
+						{
+							"key": "Date",
+							"value": "Mon, 15 Aug 2022 18:56:24 GMT"
+						},
+						{
+							"key": "Date",
+							"value": "Mon, 15 Aug 2022 18:56:24 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "close"
+						},
+						{
+							"key": "X-Powered-By",
+							"value": "PHP/8.1.6"
+						},
+						{
+							"key": "Cache-Control",
+							"value": "no-cache, private"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "X-RateLimit-Limit",
+							"value": "60"
+						},
+						{
+							"key": "X-RateLimit-Remaining",
+							"value": "59"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"success\": true,\n    \"data\": {\n        \"id\": \"62fa93661c579c12590dc7b2\",\n        \"price\": 80000000,\n        \"years\": \"2015\",\n        \"color\": \"black\",\n        \"vehicle_data\": {\n            \"machine\": \"TEST-231\",\n            \"stock\": 0,\n            \"passenger_capacity\": 4,\n            \"type\": \"TOYOTA VIOS\"\n        },\n        \"sales\": [\n            {\n                \"_id\": \"62fa946ee29e3fb04c0849e2\",\n                \"vehicle_id\": \"62fa93661c579c12590dc7b2\",\n                \"qty\": 4,\n                \"updated_at\": \"2022-08-15T18:46:06.582000Z\",\n                \"created_at\": \"2022-08-15T18:46:06.582000Z\",\n                \"total_price\": 320000000\n            },\n            {\n                \"_id\": \"62fa948c96717c00950ec432\",\n                \"vehicle_id\": \"62fa93661c579c12590dc7b2\",\n                \"qty\": 4,\n                \"updated_at\": \"2022-08-15T18:46:36.067000Z\",\n                \"created_at\": \"2022-08-15T18:46:36.067000Z\",\n                \"total_price\": 320000000\n            },\n            {\n                \"_id\": \"62fa95e0945fcfa3f806abf7\",\n                \"vehicle_id\": \"62fa93661c579c12590dc7b2\",\n                \"qty\": 2,\n                \"updated_at\": \"2022-08-15T18:52:16.017000Z\",\n                \"created_at\": \"2022-08-15T18:52:16.017000Z\",\n                \"total_price\": 160000000\n            }\n        ]\n    }\n}"
+				}
+			]
+		},
+		{
+			"name": "Submit Sales",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC9sb2NhbGhvc3Q6ODAzMFwvYXBpXC92MVwvbG9naW4iLCJpYXQiOjE2NjA1ODcyNjUsImV4cCI6MTY2MDU5MDg2NSwibmJmIjoxNjYwNTg3MjY1LCJqdGkiOiJRSTZmeHdrdzdueGhHNFNCIiwic3ViIjoiNjJmN2FkMTc0NjQyMDc5ZWIwMGFlNjMyIiwicHJ2IjoiMjNiZDVjODk0OWY2MDBhZGIzOWU3MDFjNDAwODcyZGI3YTU5NzZmNyJ9.zOmIAr_YnexblH3g2xN29bhZSaknasjZ2q-7QQDRGec",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"vehicle_id\" : \"62fa93661c579c12590dc7b2\",\r\n    \"qty\" : 2\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8030/api/v1/sales",
+					"host": [
+						"localhost"
+					],
+					"port": "8030",
+					"path": [
+						"api",
+						"v1",
+						"sales"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Submit Sales",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"vehicle_id\" : \"62fa93661c579c12590dc7b2\",\r\n    \"qty\" : 2\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8030/api/v1/sales",
+							"host": [
+								"localhost"
+							],
+							"port": "8030",
+							"path": [
+								"api",
+								"v1",
+								"sales"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Host",
+							"value": "localhost:8030"
+						},
+						{
+							"key": "Date",
+							"value": "Mon, 15 Aug 2022 18:52:16 GMT"
+						},
+						{
+							"key": "Date",
+							"value": "Mon, 15 Aug 2022 18:52:16 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "close"
+						},
+						{
+							"key": "X-Powered-By",
+							"value": "PHP/8.1.6"
+						},
+						{
+							"key": "Cache-Control",
+							"value": "no-cache, private"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "X-RateLimit-Limit",
+							"value": "60"
+						},
+						{
+							"key": "X-RateLimit-Remaining",
+							"value": "58"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"success\": true,\n    \"data\": {\n        \"id\": \"62fa95e0945fcfa3f806abf7\",\n        \"total_price\": 160000000,\n        \"current_stock\": 0,\n        \"vehicle\": {\n            \"years\": \"2015\",\n            \"price\": 80000000,\n            \"color\": \"black\",\n            \"vehicle_data\": {\n                \"machine\": \"TEST-231\",\n                \"passenger_capacity\": 4,\n                \"type\": \"TOYOTA VIOS\"\n            }\n        }\n    }\n}"
+				}
+			]
+		}
+	]
+}

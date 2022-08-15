@@ -1,0 +1,19 @@
+<?php
+
+namespace App\Services;
+
+class DummyClass 
+{
+
+  /**
+    * Create a new services instance.
+    *
+    * @return void
+  */
+  public function __construct()
+  {
+
+  }
+
+
+}
